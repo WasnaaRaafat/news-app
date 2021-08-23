@@ -1,5 +1,5 @@
-import './App.css';
 import Nav from './components/Nav.js';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import {
   Switch,
   Route,

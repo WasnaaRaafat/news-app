@@ -1,28 +1,28 @@
-import logo from '../Style/Logo.png';
+import logo from '../img/Logo.png';
 const Footer = () => {
   return (
     <div className='footer'>
       <img src={logo} width='40' height='40' alt='' />
-      <h1 className=''>Big News</h1>
+      <h2 className=''>Big News</h2>
       <div className='icons'>
         <ul>
           <li>
-            <a href='/'>
+            <a href='https://www.twitter.com/'>
               <i className='fa fa-twitter'></i>
             </a>
           </li>
           <li>
-            <a href='/'>
+            <a href='https://www.facebook.com/'>
               <i className='fa fa-facebook-f'></i>
             </a>
           </li>
           <li>
-            <a href='/'>
+            <a href='https://www.youtube.com/'>
               <i className='fa fa-youtube-play'></i>
             </a>
           </li>
           <li>
-            <a href='/'>
+            <a href='https://www.instagram.com/'>
               <i className='fa fa-instagram'></i>
             </a>
           </li>

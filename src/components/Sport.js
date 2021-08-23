@@ -1,28 +1,44 @@
 import FetchData from '../Data/FetchData';
 import { Link } from 'react-router-dom';
+import Spinner from '../img/Spinner.gif';
+
 const Sport = () => {
   const { data, error, isLoading } = FetchData(
     'https://newsapi.org/v2/top-headlines?category=sports&language=en&apiKey='
   );
   return (
     <div>
-      {error && <div> {error}</div>}
-      {isLoading && <div> Loading....</div>}
+      {error && (
+        <div className='error-text not-found'>
+          <h3>
+            {error}
+            <br />
+            Opps, Something went wrong, Try again.
+          </h3>
+        </div>
+      )}
+      {isLoading && (
+        <div className='spinner'>
+          <img src={Spinner} alt='waiting to load data' />
+        </div>
+      )}
       {data.length > 0 && (
         <div className='card-container'>
-          {data.slice(10).map((data, i) => {
+          {data.slice(11).map((data, i) => {
             return (
-              <div className='card' key={i}>
-                <Link to={{ pathname: '/Artical', state: { data: data } }}>
-                  <img src={data.urlToImage} alt='new-img' title={data.title} />
+              <Link to={{ pathname: '/Artical', state: { data: data } }}>
+                <div className='card' key={i}>
+                  <img src={data.urlToImage} alt={data.title} />
                   <div className='container'>
-                    <h4>
-                      <b>{data.title}</b>
-                    </h4>
-                    <p>{data.description}</p>
+                    <h5>
+                      <b className='card-title'>
+                        {data.title.substr(0, 80)}...
+                      </b>
+                    </h5>
+                    <p>{data.description.substr(0, 100)}...</p>
                   </div>
-                </Link>
-              </div>
+                </div>
+              </Link>
             );
           })}{' '}
         </div>

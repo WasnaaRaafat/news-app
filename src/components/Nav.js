@@ -1,12 +1,22 @@
-import { Link, NavLink } from 'react-router-dom';
-import logo from '../Style/Logo.png';
+import { NavLink } from 'react-router-dom';
+import logo from '../img/Logo.png';
 const Nav = () => {
   return (
     <div className='navbar'>
-      <img src={logo} width='40' height='40' alt='' />
-      <Link to='/'>
-        <h1 className=''>Big News</h1>{' '}
-      </Link>
+      <div>
+        <NavLink to='/'>
+          <h1 className=''>
+            <img
+              className='logo'
+              src={logo}
+              width='40'
+              height='40'
+              alt='Logo'
+            />
+            Big News
+          </h1>
+        </NavLink>
+      </div>
       <div className='links'>
         <NavLink className='nav-item' to='/'>
           Home
