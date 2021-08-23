@@ -117,9 +117,9 @@ a {
   color: var(--light-color);
   border: solid 1px var(--dark-color);
   overflow: hidden;
+  text-align: left;
 }
 .title-container h3 {
-  text-align: left;
   color: var(--light-color);
 }
 .title-container p {
@@ -258,15 +258,16 @@ a {
     margin: 0;
   }
   .title-container {
-    max-height: 60px;
-    font-size: 60%;
+    font-size: 80%;
     bottom: 23px;
     padding: 3px;
+    height: 40px;
+    max-width: 540px;
   }
 
   .title-container p {
     font-size: 90%;
-    text-align: left;
+    display: none;
   }
   .card-container {
     display: flex;

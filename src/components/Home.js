@@ -42,7 +42,7 @@ const Home = () => {
                           <img src={data.urlToImage} alt={data.title} />
                         </div>
                         <div className='title-container'>
-                          <h3>{data.title}</h3>
+                          <h4>{data.title}</h4>
                           <p>{data.description}</p>
                         </div>
                       </Link>
